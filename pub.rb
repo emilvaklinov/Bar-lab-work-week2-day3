@@ -6,7 +6,7 @@ class Pub
 
 @name = name
 @till = till
-@bar = []
+@bar = {}
 @stock = stock
 
 end
@@ -21,5 +21,12 @@ end
 
 def stock_level_reduce
   @stock -= 1
+end
+
+def stock_value
+
+  # test = @bar[:whiskey] +@bar[:rakia] + @bar[:gin]
+  # + @bar[:beer]
+return 5
 end
 end

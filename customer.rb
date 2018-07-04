@@ -25,5 +25,8 @@ def test_drunk
   end
 end
 
+def customer_buy_food(food)
+  @drunkenness -= food.rejuvenation
+  end
 
 end

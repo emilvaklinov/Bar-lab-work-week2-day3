@@ -11,5 +11,15 @@ class Pub
 
 end
 
+def add_money_to_till(drink)
+  @till += drink.price
+end
 
+def stock_level_add
+  @stock += 1
+end
+
+def stock_level_reduce
+  @stock -= 1
+end
 end

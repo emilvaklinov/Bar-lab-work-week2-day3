@@ -1,5 +1,3 @@
-
-
 class Customer
 
   attr_reader :name, :wallet, :age, :drunkenness
@@ -14,12 +12,18 @@ class Customer
 end
 
   def customer_pay_for_drink(drink)
-  if @age >18 then
+  if @age >18 && @drunkenness <= 21
+    then
   @wallet -= drink.price
   @drunkenness += drink.units
-end
+  end
   end
 
+def test_drunk
+  if @drunkenness > 20
+    return true
+  end
+end
 
 
 end

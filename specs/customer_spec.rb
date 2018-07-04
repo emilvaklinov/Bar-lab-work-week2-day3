@@ -8,8 +8,8 @@ class CustomerTest < MiniTest::Test
 
 def setup
 @pub = Pub.new("Rising sun", 100, @bar, 20)
-@emily = Customer.new("Emily", 100, 33, 0)
-@barry = Customer.new("Barry", 50, 39, 4)
+@emily = Customer.new("Emily", 100, 33, 19)
+@barry = Customer.new("Barry", 50, 39, 30)
 @sam = Customer.new("Sam", 15, 16, 0)
 @gin = Drink.new("Gin", 5, 5)
 @rakia = Drink.new("Rakia", 3, 4)
@@ -27,9 +27,12 @@ end
   def test_customer_get_drink
   @emily.customer_pay_for_drink(@gin)
   assert_equal(95, @emily.wallet)
-  assert_equal(5, @emily.drunkenness)
+  assert_equal(24, @emily.drunkenness)
   end
 
-
+def test_customer_is_drunk
+  check = @barry.test_drunk
+  assert_equal(true, check)
+end
 
 end
